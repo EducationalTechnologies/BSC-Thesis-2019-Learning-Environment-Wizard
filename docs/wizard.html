@@ -1,0 +1,84 @@
+<!-- Bianca Lien (6306494), Goethe-Universität 2020, getestet mit Google Chrome -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>Learning Environment Wizard</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap scripts: source: https://www.w3schools.com/bootstrap/bootstrap_get_started.asp -->
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<!-- CSS: -->
+	<link rel="stylesheet" href="../style/colors.css">
+	
+</head>
+
+
+<body>
+    <div class="container-fluid">
+
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html">Learning Environment Wizard</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="../index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Registrieren</a></li>
+          <li><a href="wizard.html">Wizard</a></li>
+          <li><a href="review.html">Bewertung</a></li>
+          <li><a href="tipps.html">Tipps</a></li>
+          <li><a href="map.html">Karte</a></li>
+          <li><a href="privacy.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    
+    
+    <div class="container">
+        <div class="mainpadding">
+            <h3>Wizard</h3>
+            <br>
+            <div class="row">
+                <div class="box" id="instructions">Wähle eine Antwort aus und klicke auf 'Weiter'.<br>Der 'Weiter' Button erscheint, sobald du eine Antwort ausgewählt hast.</div>
+            </div>
+            <div class="row">
+                <div id="wizard" class="wizard-container"></div> <!-- contains questions and answer options: -->
+            </div>
+            <div id="results" class="row"></div> <!-- contains results of wizard: -->
+            <div class="row"> <!-- wizard buttons: -->
+                <button id="previous">Zurück</button>
+                <button id="next">Weiter</button>
+                <button id="submit">Ergebnis anzeigen</button>
+            </div>
+            <div id="locations" class="row"></div> <!-- contains locations table: -->
+            <script src="../js/wizard.js"></script>
+            <br>
+            <div class="row">
+                <!-- button to reload the page to restart wizard: -->
+                <form action="wizard.html">
+                    <input type="submit" value="Neu beginnen" />
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    </div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,151 @@
+<!-- Bianca Lien (6306494), Goethe-Universität 2020, getestet mit Google Chrome -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>Learning Environment Wizard</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap scripts: source: https://www.w3schools.com/bootstrap/bootstrap_get_started.asp -->
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<!-- CSS: -->
+	<link rel="stylesheet" href="../style/colors.css">
+	
+</head>
+
+
+<body>
+    <div class="container-fluid">
+
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html">Learning Environment Wizard</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="../index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Registrieren</a></li>
+          <li><a href="wizard.html">Wizard</a></li>
+          <li><a href="review.html">Bewertung</a></li>
+          <li><a href="tipps.html">Tipps</a></li>
+          <li><a href="map.html">Karte</a></li>
+          <li><a href="privacy.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    
+    
+    <script src="../js/survey.js"></script>
+    
+    <div class="mainpadding">
+        <div>
+        <h3>Bewertung</h3>
+        <div class="col-lg" id="survey">
+            <br>
+            <div class="box">Hier hast du die Möglichkeit, einen Lernort zu bewerten. Du kannst außerdem Tipps zu diesem Lernort abgeben, um anderen Studenten zu helfen, die dort lernen möchten.</div><br>
+            <br>
+            <!-- survey form: -->
+            <form method="post" action="javascript:submit_survey();" id="survey_form">
+                Wo hast du gelernt? <select name="location" id="location" required>
+                  <option value="">Wähle einen Lernort aus:</option>
+                  <option value="BRuW (Bibliothek für Recht und Wirtschaft)">Bib. Recht und Wirtschaft</option>
+                  <option value="BSP (Bibliothek Sozialwissenschaften und Psychologie)">Bib. Sozialwissenschaften und Psychologie</option>
+                  <option value="BzG (Bibliothekszentrum Geisteswissenschaften)">Bibliothekszentrum Geisteswissenschaften</option>
+                  <option value="Zentralbibliothek">Zentralbibliothek</option>
+                  <option value="Bibliothek Kunstgeschichte/Städelbibliothek und Islamische Studien">Bib. Kunstgeschichte/Städelbibliothek und Islamische Studien</option>
+                  <option value="Mathematikbibliothek">Mathematikbibliothek</option>
+                  <option value="Informatikbibliothek">Informatikbibliothek</option>
+                  <option value="MedHB (Medizinische Hauptbibliothek)">Medizinische Hauptbibliothek</option>
+                  <option value="BNat (Bibliothek Naturwissenschaften)">Bib. Naturwissenschaften</option>
+                  <option value="Bibliothek für Sportwissenschaften">Bib. für Sportwissenschaften</option>
+                </select><br><br><br>
+                
+                Zu welcher Tageszeit warst du dort? <select name="time" id="time" required>
+                  <option value="">Wähle eine Tageszeit aus:</option>
+                  <option value="vormittags">vormittags</option>
+                  <option value="mittags">mittags</option>
+                  <option value="nachmittags">nachmittags</option>
+                  <option value="abends">abends</option>
+                </select><br><br><br>
+                
+                Was für Aufgaben hast du dort bearbeitet? <br>
+                <label><input type="radio" name="task" value="simpel" required> simple Aufgaben</label><br>
+                <label><input type="radio" name="task" value="komplex"> komplexe Aufgaben</label><br><br>
+                
+                Hast du zusammen mit anderen Studenten gelernt? <br>
+                <label><input type="radio" name="collaboration" value="ja" required> ja</label><br>
+                <label><input type="radio" name="collaboration" value="nein"> nein</label><br><br>
+                
+                Treffen irgendwelche der folgenden Eigenschaften auf diesen Lernort zu? (optional, Mehrfachauswahl möglich) <br>
+                  <div class="row">
+                    <div class="col-sm-2">
+                        <label><input class="attributes" type="checkbox" name="attributes[]" value="laut"> laut</label><br>
+                        <label><input class="attributes" type="checkbox" name="attributes[]" value="dunkel"> zu dunkel</label><br>
+                        <label><input class="attributes" type="checkbox" name="attributes[]" value="blenden"> blendendes Licht</label><br>
+                        <label><input class="attributes" type="checkbox" name="attributes[]" value="stickig"> stickig</label><br>
+                        <label><input class="attributes" type="checkbox" name="attributes[]" value="warm"> zu warm</label><br>
+                    </div>
+                    <div class="col-sm-10">
+                        <label><input class="attributes" type="checkbox" name="attributes[]" value="kalt"> zu kalt</label><br>
+                        <label><input class="attributes" type="checkbox" name="attributes[]" value="langweilig"> langweilig</label><br>
+                        <label><input class="attributes" type="checkbox" name="attributes[]" value="bunt"> zu bunt</label><br>
+                        <label><input class="attributes" type="checkbox" name="attributes[]" value="überfüllt"> mit Menschen überfüllt</label><br>
+                        <label><input class="attributes" type="checkbox" name="attributes[]" value="stinkend"> unangenehme Gerüche</label><br>
+                    </div>
+                  </div><br>
+
+                
+                Bist du mit deinen Lernergebnissen zufrieden? <br>
+                <label><input type="radio" name="satisfaction" value="ja" required> ja</label><br>
+                <label><input type="radio" name="satisfaction" value="nein"> nein</label><br><br>
+                
+                Würdest du diesen Lernort anderen Studenten empfehlen? <br>
+                <label><input type="radio" name="recommend" value="ja" required> ja</label><br>
+                <label><input type="radio" name="recommend" value="nein"> nein</label><br><br>
+                
+                <p>Wie viele Sterne würdest du diesem Lernort geben? (1 = sehr schlecht, 5 = sehr gut) <br>
+                <label><input type="radio" name="rating" value="1" required> &#11088;</label><br>
+                <label><input type="radio" name="rating" value="2"> &#11088;&#11088;</label><br>
+                <label><input type="radio" name="rating" value="3"> &#11088;&#11088;&#11088;</label><br>
+                <label><input type="radio" name="rating" value="4"> &#11088;&#11088;&#11088;&#11088;</label><br>
+                <label><input type="radio" name="rating" value="5"> &#11088;&#11088;&#11088;&#11088;&#11088;</label><br><br>
+
+                Welche Tipps hast du für andere Studenten, die an diesem Ort lernen wollen? (optional) <br>
+                <textarea name="tipps" cols="30" rows="5" id="tipps"></textarea><br><br>
+
+                <!-- source für opening page in new tab: https://stackoverflow.com/a/15551842 -->
+                <label><input type="checkbox" name="consent" value="ja" required> Ich habe die <a target="_blank" rel="noopener noreferrer" href="privacy.html">Datenschutzbestimmungen</a> gelesen und erkläre mich mit ihnen einverstanden.</label><br>
+             
+            <br>   
+            <input type="submit" name="submit" value="Abschicken">
+            </form>
+            
+        </div>
+    </div>
+        <div>
+            <br>
+            <!-- button for reloading the page to start over: -->
+            <form action="review.html">
+                <input type="submit" value="Neu beginnen" />
+            </form>
+            <br>
+        </div>
+    
+    </div>
+    </div>
+    
+
+</body>
+
+
+</html>
