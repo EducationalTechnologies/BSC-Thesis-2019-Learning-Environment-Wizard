@@ -1,0 +1,55 @@
+/* Bianca Lien (6306494), Goethe-Universität 2020, getestet mit Google Chrome */
+
+
+/* source: https://www.sitepoint.com/simple-javascript-quiz/ (19.01.20)
+changes visibility of single questions in wizard and defines size of wizard container*/
+.slide{
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+.wizard-container{
+  position: relative;
+  height: 250px;
+  margin-top: 40px;
+}
+
+
+
+
+/* defines border and padding of table for the info on locations */
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+
+
+
+
+/* defines padding, used for each html page except for login and registration */
+.mainpadding {
+  padding-bottom: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+
+
+/* defines color and style of boxes used for tipps and directions */
+.box {
+  background: PaleGreen;
+  border: 1px solid black;
+  padding: 15px;
+}
