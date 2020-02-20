@@ -5,7 +5,9 @@ tested on Google Chrome
 
 
 Admin login info (log in on the "Learning Environment Wizard" to download feedback data):
+
 username: admin
+
 password: adminpassword
 
 In order to use the website, you will need one database with three tables with the following names (and column names): 
