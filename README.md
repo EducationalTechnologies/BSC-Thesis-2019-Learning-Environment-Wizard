@@ -1,6 +1,6 @@
 # Learning-Environment-Wizard-Bachelor-thesis
 This repository contains my Bachelor thesis and all corresponding documents. 
-Bianca Lien (6306494), Goethe-Universität 2020, s0580779@stud.uni-frankfurt.de
+Bianca Lien (6306494), Goethe-Universität 2020
 tested on Google Chrome
 
 
